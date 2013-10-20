@@ -21,12 +21,12 @@ Creating database.
     rake db:create
 
 
-Add *gem "paperclip"* in Gemfile
+Add *gem "paperclip"* in Gemfile and run:
 
     bundle install
 
-Generating a simple user resource, Rails will take care of routing and other
-stuff. In Rails 3.2 types are string by default if you ommit them generators
+Now, we generate a simple user resource; Rails will take care of routing and other
+stuff. In Rails 3.2 type is string by default if you omit it in generators
 (for name and email).
 
     rails generate scaffold user name email
@@ -38,17 +38,17 @@ Now, let's add file attachment ability to our User model.
 
 This is our new migration in db/migrate:
 
-class AddAttachmentVideoAttachmentToUsers < ActiveRecord::Migration
-  def self.up
-    change_table :users do |t| 
-      t.attachment :video_attachment
-    end
-  end 
+    class AddAttachmentVideoAttachmentToUsers < ActiveRecord::Migration
+      def self.up
+        change_table :users do |t| 
+          t.attachment :video_attachment
+        end
+      end 
             
-  def self.down
-    drop_attached_file :users, :video_attachment
-  end 
-end
+      def self.down
+        drop_attached_file :users, :video_attachment
+      end 
+    end
     
 
 Let's apply our migration.
