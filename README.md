@@ -3,7 +3,7 @@ paperclip-rails3-demo
 
 Small tutorial for showing file upload functionality with Paperclip 3.5.1
 
-There a lot paperclip demos, showing some avatar upload and initial setup of
+There are a lot of paperclip demos, showing some avatar upload and initial setup of
 Rails 3 application. But I was looking for some simpler examples, with just
 upload functionality, no thumbnails, no Amazon S3 storage.
 
