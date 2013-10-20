@@ -56,11 +56,11 @@ Let's apply our migration.
     rake db:migrate
 
 I use annotate gem for adding database table property information to my models,
-just a convenience (just run *gem install annotate* if you want it).
+just a convenience (run *gem install annotate* if you want it).
 
     annotate
 
-If you *cat app/models/user.rb* you can see several extra columns starting with
+With *cat app/models/user.rb* you can see several extra columns starting with
 video_attachment_
                           
     # Table name: users
